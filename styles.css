@@ -1,0 +1,70 @@
+body {
+    background-color: #ECE9D8; /* Tom suave de bege da paleta */
+    font-family: 'Arial', sans-serif;
+    color: #2A4B4E; /* Verde escuro para o texto */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    background-color: #FFFFFF; /* Fundo branco para contraste */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    color: #FFD700; /* Amarelo vibrante da paleta */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2A4B4E; /* Verde escuro */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A8D5BA; /* Verde menta */
+    border-radius: 5px;
+    background-color: #F0F0F0; /* Cinza claro */
+    color: #2A4B4E;
+}
+
+.submit-btn {
+    background-color: #FFD700; /* Amarelo */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #FFC300; /* Amarelo mais escuro para o efeito hover */
+}
+
+a {
+    color: #2A4B4E; /* Verde escuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
