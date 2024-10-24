@@ -68,3 +68,70 @@ a {
 a:hover {
     text-decoration: underline;
 }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F6F3E8; /* Cor suave de fundo */
+    margin: 0;
+    padding: 0;
+    color: #3D3D3D; /* Cor de texto */
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #E8E3D3; /* Cor suave para a barra lateral */
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: #8A7D55; /* Um tom terroso mais escuro */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #8A7D55;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    color: #D4A956; /* Cor de destaque ao passar o mouse */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: #3D3D3D;
+}
+
+.content h1 {
+    font-size: 24px;
+    color: #D4A956; /* Cor suave de destaque */
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #8A7D55; /* Cor para os títulos dos tópicos */
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
