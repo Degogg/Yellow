@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuário</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="form-box">
-            <h2>Crie sua Conta</h2>
-            <form action="#" method="POST">
+            <h2>Crie Sua Conta</h2>
+            <form id="registration-form">
                 <div class="input-group">
-                    <label for="username">Nome de Usuário</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="input-group">
                     <label for="email">Email</label>
@@ -28,5 +28,28 @@
             <p>Já tem uma conta? <a href="login.html">Entre aqui</a></p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos campos
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Armazena os dados no localStorage
+            const userData = {
+                name: name,
+                email: email,
+                password: password
+            };
+
+            localStorage.setItem('userData', JSON.stringify(userData)); // Converte para string e armazena
+
+            alert('Registro bem-sucedido! Você será redirecionado para a página inicial.');
+            window.location.href = 'home.html'; // Redireciona para a página home
+        });
+    </script>
 </body>
 </html>

@@ -135,3 +135,72 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+
+/* Adicione no seu styles.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* styles.css */
+nav a.active {
+    color: #007BFF; /* Mude para a cor que preferir */
+    font-weight: bold;
+}
+
+/* Estilos para o header e o botão de login */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Adiciona espaçamento no topo do conteúdo principal para evitar sobreposição do header fixo */
+.main-container {
+    margin-top: 60px; /* Ajuste o valor conforme necessário */
+}
+
+/* Estilo para o container dos vídeos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Estilo para o iframe do vídeo */
+.video-container iframe {
+    width: 100%;
+    max-width: 560px; /* Largura máxima para telas maiores */
+    height: 315px;    /* Altura correspondente ao formato 16:9 */
+    border: 4px solid #007BFF; /* Cor da borda no tema */
+    border-radius: 8px; /* Bordas arredondadas para um visual moderno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+}
+
+/* Ajuste de tamanho para telas menores */
+@media (max-width: 600px) {
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+

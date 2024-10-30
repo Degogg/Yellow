@@ -10,7 +10,7 @@
     <div class="container">
         <div class="form-box">
             <h2>Bem-vindo de Volta</h2>
-            <form action="#" method="POST">
+            <form id="login-form">
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -24,5 +24,33 @@
             <p>Não tem uma conta? <a href="registro.html">Registre-se aqui</a></p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos campos
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Recupera os dados armazenados no localStorage
+            const storedData = localStorage.getItem('userData');
+
+            if (storedData) {
+                const userData = JSON.parse(storedData); // Converte de volta para objeto
+
+                // Verifica se o email e a senha estão corretos
+                if (email === userData.email && password === userData.password) {
+                    alert('Login bem-sucedido!'); // Alerta de sucesso
+                    // Aqui você pode redirecionar para a página inicial ou outra página
+                    window.location.href = 'home.html'; // Exemplo de redirecionamento
+                } else {
+                    alert('Email ou senha incorretos. Tente novamente.'); // Alerta de erro
+                }
+            } else {
+                alert('Nenhum usuário registrado. Faça o registro primeiro.');
+            }
+        });
+    </script>
 </body>
 </html>
